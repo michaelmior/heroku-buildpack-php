@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+mysqli_version=/2ef9e04adc065f3688d4c2d426465adc9cc50a38
+
+curl -L "https://raw.github.com/elliottcarlson/heroku-php-mysqli/2ef9e04adc065f3688d4c2d426465adc9cc50a38/mysqli.so"
+
+cp mysqli.so "#EXT_DIR/mysqli.so"
+echo "extension=mysqli.so" > "$PREFIX/etc/conf.d/mysqli.ini"
+
